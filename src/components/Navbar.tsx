@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Youtube, TikTok } from 'lucide-react';
+import { Menu, X, Instagram, Youtube } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import TikTokIcon from './icons/TikTokIcon';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,7 +106,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-shayo-purple transition-colors"
             >
-              <TikTok size={20} />
+              <TikTokIcon size={20} />
             </a>
           </div>
         </nav>

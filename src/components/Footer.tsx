@@ -1,5 +1,6 @@
 
-import { Instagram, Youtube, TikTok } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
+import TikTokIcon from './icons/TikTokIcon';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,7 +37,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-shayo-purple transition-colors"
               >
-                <TikTok size={20} />
+                <TikTokIcon size={20} />
               </a>
             </div>
           </div>
