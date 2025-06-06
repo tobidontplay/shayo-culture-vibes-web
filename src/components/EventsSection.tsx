@@ -37,29 +37,9 @@ const events: Event[] = [
   },
   {
     id: 2,
-    name: 'Summer Shayo',
-    date: 'August 17, 2024',
-    description: 'Vibrant summer celebration with unforgettable beats',
-    status: 'upcoming',
-    thumbnail: '/images/events/summer-shayo-august-2024/thumbnail.jpg',
-    images: [
-      '/images/events/summer-shayo-august-2024/image1.jpg',
-      '/images/events/summer-shayo-august-2024/image2.jpg',
-      '/images/events/summer-shayo-august-2024/image3.jpg',
-      '/images/events/summer-shayo-august-2024/image4.jpg',
-      '/images/events/summer-shayo-august-2024/image5.jpg',
-      '/images/events/summer-shayo-august-2024/image6.jpg',
-      '/images/events/summer-shayo-august-2024/image7.jpg',
-      '/images/events/summer-shayo-august-2024/image8.jpg',
-      '/images/events/summer-shayo-august-2024/image9.jpg',
-      '/images/events/summer-shayo-august-2024/image10.jpg'
-    ]
-  },
-  {
-    id: 3,
     name: 'MAD: Detty December',
     date: 'December 20, 2024',
-    description: 'End the year with the ultimate Nigerian party experience',
+    description: 'End of year celebration with special guests',
     status: 'upcoming',
     thumbnail: '/images/events/detty-december-2024/thumbnail.jpg',
     images: [
@@ -73,10 +53,50 @@ const events: Event[] = [
       '/images/events/detty-december-2024/image8.jpg',
       '/images/events/detty-december-2024/image9.jpg',
       '/images/events/detty-december-2024/image10.jpg'
-    ]
+    ],
+  },
+  {
+    id: 3,
+    name: 'Love & Lust',
+    date: 'April 12, 2025',
+    description: 'Valentine special celebration of love and passion',
+    status: 'upcoming',
+    thumbnail: '/images/events/love-and-lust-april-2025/thumbnail.jpg',
+    images: [
+      '/images/events/love-and-lust-april-2025/image1.jpg',
+      '/images/events/love-and-lust-april-2025/image2.jpg',
+      '/images/events/love-and-lust-april-2025/image3.jpg',
+      '/images/events/love-and-lust-april-2025/image4.jpg',
+      '/images/events/love-and-lust-april-2025/image5.jpg',
+      '/images/events/love-and-lust-april-2025/image6.jpg',
+      '/images/events/love-and-lust-april-2025/image7.jpg',
+      '/images/events/love-and-lust-april-2025/image8.jpg',
+      '/images/events/love-and-lust-april-2025/image9.jpg',
+      '/images/events/love-and-lust-april-2025/image10.jpg'
+    ],
   },
   {
     id: 4,
+    name: 'Summer Shayo',
+    date: 'August 17, 2024',
+    description: 'Lagos-inspired summer party',
+    status: 'sold-out',
+    thumbnail: '/images/events/summer-shayo-august-2024/thumbnail.jpg',
+    images: [
+      '/images/events/summer-shayo-august-2024/image1.jpg',
+      '/images/events/summer-shayo-august-2024/image2.jpg',
+      '/images/events/summer-shayo-august-2024/image3.jpg',
+      '/images/events/summer-shayo-august-2024/image4.jpg',
+      '/images/events/summer-shayo-august-2024/image5.jpg',
+      '/images/events/summer-shayo-august-2024/image6.jpg',
+      '/images/events/summer-shayo-august-2024/image7.jpg',
+      '/images/events/summer-shayo-august-2024/image8.jpg',
+      '/images/events/summer-shayo-august-2024/image9.jpg',
+      '/images/events/summer-shayo-august-2024/image10.jpg'
+    ],
+  },
+  {
+    id: 5,
     name: 'Midnight Masquerade',
     date: 'October 31, 2024',
     description: 'A night of mystery and elegance',
