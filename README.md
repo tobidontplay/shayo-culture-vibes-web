@@ -71,3 +71,13 @@ Yes it is!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Agent and Ariadne docs
+
+- [AGENTS.md](./AGENTS.md) — operating instructions for AI agents
+- [specs/project-brief.md](./specs/project-brief.md) — project brief
+- [docs/architecture/overview.md](./docs/architecture/overview.md) — system architecture
+- [docs/ai-log/index.md](./docs/ai-log/index.md) — AI interaction log
+- [CASE-STUDY.md](./CASE-STUDY.md) — case study
+- [project.yaml](./project.yaml) — how Ariadne runs, tests, and builds this repo
+- [docs/verification.md](./docs/verification.md) — verification log
