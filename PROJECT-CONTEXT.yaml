@@ -1,0 +1,432 @@
+# Machine-readable audit of shayo-culture-vibes-web.
+# analysis_version is 1. Unknown values are null. Keys are present on purpose.
+project:
+  name: Midnight Shayo
+  slug: shayo-culture-vibes-web
+  repo: tobidontplay/shayo-culture-vibes-web
+  url: https://github.com/tobidontplay/shayo-culture-vibes-web
+  visibility: public
+  default_branch: main
+  tip_sha: d09e298
+  homepage: https://shayo-culture-vibes-web.vercel.app
+  owner_github: tobidontplay
+  personal_name: null
+  package_name: vite_react_shadcn_ts
+  package_version: 0.0.0
+  lovable_project_url: https://lovable.dev/projects/a37839ae-8452-4e61-8cb9-414738291c8d
+purpose: >
+  A one-page marketing site for Midnight Shayo, a cultural series aimed at
+  Nigerian Gen-Zs. The page presents a podcast, event galleries, a dating-series
+  promo, and a newsletter block. There is no application server.
+stage: implemented
+maturity: early
+last_analysis: "2026-10-01"
+confidence:
+  label: medium
+  score: 0.74
+  static_code: high
+  public_homepage: high
+  local_dev_server: null
+  production_git_sha: null
+  marketing_claims_in_the_world: low
+  basis: >
+    Source was read. The public homepage, a gallery thumbnail, the placeholder
+    file, and the Spotify URLs were requested on 2026-10-01. Vite was not
+    started. The browser was not driven. The third-party script body was not read.
+analysis_version: 1
+goals:
+  - id: G1
+    kind: stated
+    text: Single-page cultural site with event galleries on that page.
+    source: specs/project-brief.md
+    success_criteria:
+      - npm run dev serves the page on port 8080
+      - June 2025 galleries render on the home page
+    met: partial
+  - id: G2
+    kind: stated
+    text: One page presents Midnight Shayo, its events, and a newsletter block.
+    source: specs/features/001-cultural-home.md
+    success_criteria:
+      - index title is Midnight Shayo
+      - Index composes hero, events, dating series, podcast, and newsletter
+      - Unknown paths render NotFound
+      - Dev server port is 8080
+    met: partial
+  - id: G3
+    kind: stated
+    text: A page for events that is more than a social link.
+    source: CASE-STUDY.md
+    success_criteria: null
+    met: partial
+  - id: G4
+    kind: stated
+    text: A discoverer can find events, and an editor can add a gallery.
+    source: specs/project-brief.md
+    success_criteria: null
+    met: partial
+  - id: G5
+    kind: stated
+    text: A monitor can run and build from project.yaml without guessing.
+    source: project.yaml
+    success_criteria:
+      - run is npm run dev
+      - build is npm run build
+      - port is 8080
+    met: partial
+  - id: G6
+    kind: stated
+    text: Shipped means a recorded test, a manual check, and a user opinion.
+    source: docs/verification.md
+    success_criteria:
+      - a row in docs/verification.md
+      - verified_by set by the user
+    met: false
+  - id: G7
+    kind: stated
+    text: Confirm the newsletter destination and whether the site is still deployed.
+    source: TODO.md
+    success_criteria:
+      - newsletter destination known
+      - deploy confirmed
+    met: partial
+  - id: I1
+    kind: inferred
+    text: Joining the movement stores an email the team can read.
+    source: src/components/NewsletterSection.tsx
+    success_criteria:
+      - submit writes to a destination
+      - the toast matches that write
+    met: false
+capabilities:
+  - id: home-route
+    name: Homepage at /
+    status: done
+    confidence: high
+    evidence: src/App.tsx
+  - id: hero
+    name: Hero, stats, marquee
+    status: done
+    confidence: high
+    evidence: src/components/HeroSection.tsx
+  - id: in-page-nav
+    name: Hash navigation
+    status: done
+    confidence: high
+    evidence: src/components/Navbar.tsx
+  - id: mobile-nav
+    name: Mobile menu
+    status: done
+    confidence: medium
+    evidence: src/components/Navbar.tsx
+  - id: podcast-promo
+    name: Podcast promotion
+    status: partial
+    confidence: high
+    evidence: src/components/PodcastSection.tsx
+  - id: event-catalog
+    name: Event list
+    status: partial
+    confidence: high
+    evidence: src/components/EventsSection.tsx
+  - id: event-gallery
+    name: Event lightbox
+    status: partial
+    confidence: high
+    evidence: src/components/EventGallery.tsx
+  - id: dating-series-promo
+    name: Stay or Sway promotion
+    status: partial
+    confidence: high
+    evidence: src/components/DatingSeriesSection.tsx
+  - id: newsletter-capture
+    name: Email capture
+    status: broken
+    confidence: high
+    evidence: src/components/NewsletterSection.tsx
+  - id: social-outbound
+    name: Social profile links
+    status: partial
+    confidence: medium
+    evidence: src/components/Footer.tsx
+  - id: legal-pages
+    name: Privacy and terms
+    status: absent
+    confidence: high
+    evidence: src/components/Footer.tsx
+  - id: not-found
+    name: Unknown-path page
+    status: done
+    confidence: medium
+    evidence: src/pages/NotFound.tsx
+  - id: seo-share
+    name: Share metadata
+    status: partial
+    confidence: high
+    evidence: index.html
+  - id: image-scripts
+    name: HEIC conversion scripts
+    status: partial
+    confidence: high
+    evidence: convert_images.sh
+  - id: tests
+    name: Automated tests
+    status: absent
+    confidence: high
+    evidence: package.json
+  - id: ci
+    name: Continuous integration
+    status: absent
+    confidence: high
+    evidence: null
+  - id: http-api
+    name: Application HTTP API
+    status: absent
+    confidence: high
+    evidence: docs/architecture/api.md
+  - id: auth
+    name: Authentication
+    status: absent
+    confidence: high
+    evidence: null
+  - id: persistence
+    name: Saved visitor data
+    status: absent
+    confidence: high
+    evidence: src/components/NewsletterSection.tsx
+  - id: deployment
+    name: Public hosting
+    status: partial
+    confidence: high
+    evidence: https://shayo-culture-vibes-web.vercel.app
+  - id: analytics
+    name: Product analytics
+    status: absent
+    confidence: medium
+    evidence: index.html
+stack:
+  language: TypeScript
+  ui: React 18
+  bundler: Vite 5
+  router: react-router-dom 6
+  css: Tailwind 3
+  component_kit: shadcn/ui on Radix
+  database: null
+  backend: null
+  auth: null
+  package_manager: npm
+  alternate_lockfile: bun.lockb
+  node_types: null
+  dev_port: 8080
+  dev_host: "::"
+  strict_port: false
+  typescript_strict: false
+architecture:
+  style: client-rendered single-page brochure
+  entry: src/main.tsx
+  routes:
+    - path: /
+      component: src/pages/Index.tsx
+    - path: "*"
+      component: src/pages/NotFound.tsx
+  sections:
+    - navbar
+    - hero
+    - podcast
+    - events
+    - dating-series
+    - newsletter
+    - footer
+  content_store: hardcoded arrays in components plus public/images
+  gallery: src/components/EventGallery.tsx
+  api: null
+  providers:
+    - QueryClientProvider
+    - TooltipProvider
+    - Radix Toaster
+    - Sonner Toaster
+  notes: >
+    QueryClient has no queries. Sonner is mounted and never called.
+    Product buttons are CSS classes, not the shadcn Button.
+risks:
+  - id: R1
+    severity: high
+    title: Newsletter false success
+    detail: Subscribe toasts success and discards the address.
+    capability: newsletter-capture
+  - id: R2
+    severity: high
+    title: Spotify show URL 404
+    detail: >
+      open.spotify.com/show/37i9dQZF1DX0s5kDXi1oC5 returned HTTP 404 on
+      2026-10-01. The same id on /playlist/ returned HTTP 200.
+    capability: podcast-promo
+  - id: R3
+    severity: high
+    title: Event list contradicts itself
+    detail: >
+      Duplicate id 5. Five Upcoming badges on dates before the audit.
+      Hero says 6 sold-out events. Two badges say Sold Out.
+      placeholder.jpg is 1 byte.
+    capability: event-catalog
+  - id: R4
+    severity: high
+    title: Share cards are still the generator brand
+    detail: og:image and twitter:site on the live page are Lovable defaults.
+    capability: seo-share
+  - id: R5
+    severity: medium
+    title: Third-party script on the public page
+    detail: cdn.gpteng.co/gptengineer.js is in the live HTML. Body not reviewed.
+    capability: analytics
+  - id: R6
+    severity: medium
+    title: No verification record
+    detail: docs/verification.md is empty. feat-001 verified_by is null.
+    capability: tests
+  - id: R7
+    severity: medium
+    title: Image scripts are machine-local
+    detail: Absolute paths under /Users/tobi/Documents.
+    capability: image-scripts
+  - id: R8
+    severity: low
+    title: Dev server binds all interfaces
+    detail: "Vite host is :: . No secrets in src."
+    capability: home-route
+decisions:
+  - id: D1
+    title: One client route
+    status: accepted-by-code
+    source: src/App.tsx
+    adr: null
+  - id: D2
+    title: Event content is a React constant plus static JPEGs
+    status: accepted-by-code
+    source: src/components/EventsSection.tsx
+    adr: null
+  - id: D3
+    title: Gallery uses CSS transitions after a black-screen bug
+    status: accepted-by-code
+    source: src/components/EventGallery.tsx
+    adr: null
+  - id: D4
+    title: Dev server port is 8080
+    status: accepted
+    source: docs/architecture/decisions/001-vite-port-8080.md
+    adr: docs/architecture/decisions/001-vite-port-8080.md
+  - id: D5
+    title: TikTok icon is a local SVG
+    status: accepted-by-code
+    source: src/components/icons/TikTokIcon.tsx
+    adr: null
+  - id: D6
+    title: Specs for feat-001 were written after the page existed
+    status: recorded
+    source: git log
+    adr: null
+open_questions:
+  - id: Q1
+    question: Where should a newsletter address go, or should the form be removed?
+    blocking: true
+    answer: null
+  - id: Q2
+    question: Which Spotify, Apple, and Google URLs are the real show?
+    blocking: false
+    answer: null
+  - id: Q3
+    question: Which of the seven events are real, and which statuses should they have now?
+    blocking: false
+    answer: null
+  - id: Q4
+    question: Are the hero statistics approved, and what is their source?
+    blocking: false
+    answer: null
+  - id: Q5
+    question: Are the two testimonials approved?
+    blocking: false
+    answer: null
+  - id: Q6
+    question: Is the Vercel homepage still production, and which git SHA should it track?
+    blocking: false
+    answer: null
+  - id: Q7
+    question: Should gptengineer.js and the Lovable share tags stay on the public page?
+    blocking: false
+    answer: null
+  - id: Q8
+    question: Should privacy and terms become pages or be removed?
+    blocking: false
+    answer: null
+  - id: Q9
+    question: Is a test suite out of scope (project brief) or someday work (TODO.md)?
+    blocking: false
+    answer: null
+  - id: Q10
+    question: Should the Vite dev server keep host ::?
+    blocking: false
+    answer: null
+  - id: Q11
+    question: Should the event list move out of the component into a data file?
+    blocking: false
+    answer: null
+roadmap:
+  - id: now-newsletter
+    text: Confirm the newsletter has a destination.
+    source: TODO.md
+    status: open
+  - id: now-deploy
+    text: Confirm the site is still deployed.
+    source: TODO.md
+    status: partial
+    note: Homepage returned HTTP 200 on 2026-10-01. SHA not identified. Checkbox in TODO.md still open.
+  - id: next-verification
+    text: Record a manual load of port 8080 in docs/verification.md.
+    source: TODO.md
+    status: open
+  - id: someday-tests
+    text: Add tests. None exist.
+    source: TODO.md
+    status: open
+    conflicts_with: specs/project-brief.md out of scope line
+links:
+  readme: README.md
+  agents: AGENTS.md
+  brief: specs/project-brief.md
+  feature: specs/features/001-cultural-home.md
+  case_study: CASE-STUDY.md
+  changelog: CHANGELOG.md
+  todo: TODO.md
+  architecture: docs/architecture/overview.md
+  api: docs/architecture/api.md
+  data_model: docs/architecture/data-model.md
+  adr_port: docs/architecture/decisions/001-vite-port-8080.md
+  verification: docs/verification.md
+  project_yaml: project.yaml
+  state: PROJECT-STATE.md
+  goals: PROJECT-GOALS.md
+  gap: PROJECT-GAP.md
+  teach: PROJECT-TEACH.md
+  context: PROJECT-CONTEXT.yaml
+  ai_log: docs/ai-log/index.md
+teaching_hooks:
+  - id: H1
+    type: teaching
+    hook: The subscribe button says you joined, and then it throws the email away.
+    concept: A success toast is a claim. If nothing was written, the claim is the bug.
+  - id: H2
+    type: teaching
+    hook: Forty-five UI files ship in the repo and the page never imports them.
+    concept: A generator scaffold is not the product. Trace imports from main.tsx.
+  - id: H3
+    type: decision
+    hook: The spec is dated a year after the page.
+    concept: A later document can describe a system without having caused it.
+  - id: H4
+    type: bug
+    hook: The Spotify button uses a playlist id on a show URL, and Spotify returns 404.
+    concept: Read the path and the id separately, then request the URL.
+  - id: H5
+    type: teaching
+    hook: delay-${index} never becomes a CSS delay, because Tailwind only sees complete class strings.
+    concept: Build tools scan source text. They do not run your template strings.

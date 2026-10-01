@@ -65,3 +65,14 @@ If this file conflicts with a direct user request, ASK before proceeding.
 - Concept mastery lives in docs/learning/concepts.md frontmatter.
 - When you complete a feature, update its frontmatter: stage, validation
   fields, verified_by. Do not mark "accepted" without user validation.
+
+## 11. Project Analysis Artifacts
+These files are the deep-analysis kit for this repo. They describe the
+product. They are not application code. Read them before changing behavior.
+If a sentence in the kit disagrees with the code, the code wins. Then update
+the kit.
+- [PROJECT-STATE.md](./PROJECT-STATE.md) — tables of identity, stack, components, capabilities, endpoints, data, tests, dead code, what works, and what is broken. Confidence is `[HIGH]`, `[MED]`, or `[LOW]`.
+- [PROJECT-GOALS.md](./PROJECT-GOALS.md) — stated goals, inferred goals, success criteria, non-goals, target user, stage, and questions for the owner.
+- [PROJECT-GAP.md](./PROJECT-GAP.md) — one gap row per capability, the three largest gaps, and the blocking gap.
+- [PROJECT-TEACH.md](./PROJECT-TEACH.md) — mental model, architecture, decisions, technologies, failure modes, conventions, and tutor checkpoints. Defendable claims only.
+- [PROJECT-CONTEXT.yaml](./PROJECT-CONTEXT.yaml) — the same audit in the Ariadne analysis schema, `analysis_version: 1`. Unknowns are `null`.
