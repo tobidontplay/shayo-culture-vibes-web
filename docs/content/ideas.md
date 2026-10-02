@@ -4,6 +4,8 @@ a senior-signal moment. One row per idea. Keep it raw. You will mine this later.
 | Date | Source Log | Type | Idea | Hook (1 sentence) |
 |------|-----------|------|------|-------------------|
 | 2026-09-25 | [0001](../ai-log/entries/0001-2026-09-25-fleet-onboarding.md) | teaching | auditing an entire GitHub fleet with an AI agent | A fleet looks documented until you ask every repo how to run it, and most of them cannot answer. |
+| 2026-10-01 | [0002](../ai-log/entries/0002-2026-10-01-deep-analysis-teaching-kit.md) | bug | a subscribe toast that stores nothing | The button says you joined the movement, and the handler deletes the email. |
+| 2026-10-01 | [0002](../ai-log/entries/0002-2026-10-01-deep-analysis-teaching-kit.md) | teaching | scaffold versus the eight sections that are the product | Forty-five UI files never get imported, and the page is still just one route. |
 ## How the AI should fill this
 - **Type** options: bug, refactor, plan, decision, mistake, win, teaching.
 - **Idea**: the raw thing that happened.
